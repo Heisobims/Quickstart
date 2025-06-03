@@ -145,8 +145,12 @@ header {
   display: block;
 }
 
-.fa-solid .fa-caret-down {
-  margin-left: 5rem;
+.fa-solid {
+  color: #1c79ca;
+}
+
+.faa-services{
+  margin-bottom: 2rem;
 }
 
 /* Hero style */
