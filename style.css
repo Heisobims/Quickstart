@@ -903,6 +903,12 @@ border-radius: 1rem;
     text-align: center;
   }
 
+  .footer-second{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
   .insight-wrapper h2 {
     font-size: 1.5rem;
   }
@@ -1107,6 +1113,13 @@ border-radius: 1rem;
   .footer-link {
     width: 100%;
     padding: 0 2rem;
+  }
+
+  
+  .footer-second{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
 
