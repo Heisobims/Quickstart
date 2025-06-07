@@ -861,8 +861,13 @@ border-radius: 1rem;
 /* Medium Devices (Tablets, 768px to 991px) */
 @media (max-width: 991px) and (min-width: 768px) {
   .hero {
-    padding: 3rem 1rem;
     height: auto;
+    padding: 4rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    letter-spacing: normal;
   }
 
   .hero-content {
@@ -870,11 +875,6 @@ border-radius: 1rem;
     top: auto;
     left: auto;
     transform: none;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-    letter-spacing: normal;
   }
 
   header {
@@ -893,9 +893,8 @@ border-radius: 1rem;
   }
 
   .footer-contain {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    padding: 1.5rem;
+    align-items: flex-start;
   }
 
   .footer-title {
@@ -903,30 +902,50 @@ border-radius: 1rem;
     text-align: center;
   }
 
+  .footer-title h1 {
+    font-size: 34px;
+  }
   .footer-link {
     width: 100%;
-    text-align: center;
     padding: 0 2rem;
   }
 
+  
   .footer-second{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: #000000;
+    padding: 0.5rem;
+    background-color: #0a151f;
+  }
+
+  .footer-second h4{
+    font-size: 14px;
   }
 
 
-
+  .insight-wrapper {
+    text-align: center;
+  }
 
   .insight-wrapper h2 {
     font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 
-  .insight_one{
+  .insight_one {
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
+    margin: 0 auto;
+    margin-top: 2rem;
   }
+
+  .insight_one img {
+    width: 100%;
+    height: auto;
+  }
+
 
   .team-member img {
     width: 100%;
@@ -1016,31 +1035,19 @@ border-radius: 1rem;
     color: #122b3f;
   }
 
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    padding: 0 2rem;
+  .hero-btn.primary,
+  .hero-btn.secondary {
+    width: fit-content;
   }
 
-
-
-.feature {
-    text-align: center;
-    margin-bottom: 2rem;
+  .hero-btn.primary:hover {
+    background-color: #e1ffe9;
+    text-decoration: none;
   }
 
+  /* Services */
 
 
-  .feature p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    overflow-wrap: break-word;
-    text-align: center;
-  }
-
-
- /* Services */
 .service-list {
   display: flex;
   flex-direction: column;
@@ -1077,8 +1084,39 @@ border-radius: 1rem;
     gap: 1rem;
   }
 
+  #hero-pages {
+    font-family: "Bebas Neue", sans-serif;
+    color: #1a4a75;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #hero-pages h1 {
+    font-size: 3rem;
+    color: #112A3E;
+    line-height: 3rem;
+  }
+
+  #hero {
+    color: #1a4a75;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #hero h1 {
+    font-size: 3rem;
+    color: #112A3E;
+    line-height: 5rem;
+  }
+
+
 }
 
+/* Responsive Styles */
 /* Small Devices (Phones, less than 768px) */
 @media (max-width: 767px){
   .hero {
