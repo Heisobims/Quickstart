@@ -291,7 +291,7 @@ header {
   color: #1a4a75;
   height: 60vh;
   background-image: url("/images/COVERbg.jpg");
-  background-size: cover;
+  /* background-size: cover; */
   background-position: center;
   display: flex;
   justify-content: center;
@@ -1014,7 +1014,7 @@ border-radius: 1rem;
 #hero-pages{
   font-family: "Bebas Neue", sans-serif;
   color: #1a4a75;
-  height: 40vh;
+  height: 50vh;
   text-align: center;
   display: flex;
   align-items: center;
@@ -1223,7 +1223,7 @@ border-radius: 1rem;
 #hero-pages{
   font-family: "Bebas Neue", sans-serif;
   color: #1a4a75;
-  height: 40vh;
+  height: 50vh;
   text-align: center;
   display: flex;
   align-items: center;
@@ -1240,7 +1240,6 @@ border-radius: 1rem;
 
 
 #hero{
-  font-family: "Bebas Neue", sans-serif;
   color: #1a4a75;
   text-align: center;
   display: flex;
