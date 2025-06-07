@@ -417,7 +417,6 @@ header {
   font-size: 1rem;
 
 
-
 }
 
 .services h1 {
@@ -908,6 +907,11 @@ border-radius: 1rem;
     font-size: 1.5rem;
   }
 
+  .insight_one{
+    flex-direction: column;
+    align-items: center;
+  }
+
   .team-member img {
     width: 100%;
   }
@@ -1021,36 +1025,34 @@ border-radius: 1rem;
 
 
  /* Services */
-
-.services {
-  background-color: #ecebeb;
-  align-content: center;
-}
-
-
-.services .service-list {
+.service-list {
   display: flex;
+  flex-direction: column;
+  align-content: center;
   justify-content: center;
   gap: 4rem;
 }
 
-.service-item p {
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
+.service-item {
+  text-align: center;
 }
 
-.services h1 {
+.service-item p {
+  margin-bottom: 1.5rem;
   text-align: center;
-  font-size: 3rem;
-  margin-bottom: 3rem;
+  font-size: 1rem;
+
+
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
   color: #112A3E;
 }
 
-.service-icon {
-  font-size: 2.5rem;
-  color: #0077cc;
-  margin-bottom: 20px;
-}
+
 
 
   .cell-row {
@@ -1107,9 +1109,29 @@ border-radius: 1rem;
     padding: 0 2rem;
   }
 
+
+  .insight-wrapper {
+    text-align: center;
+  }
+
   .insight-wrapper h2 {
     font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
+
+  .insight_one {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+
+  .insight_one img {
+    width: 100%;
+    height: auto;
+  }
+
 
   .team-member img {
     width: 100%;
@@ -1211,25 +1233,34 @@ border-radius: 1rem;
 
   /* Services */
 
-.services {
-  background-color: #ecebeb;
-  padding: 4rem 2rem;
+
+.service-list {
+  display: flex;
+  flex-direction: column;
   align-content: center;
-  align-items: center;
   justify-content: center;
-  justify-items: center;
+  gap: 4rem;
+}
+
+.service-item {
+  text-align: center;
 }
 
 .service-item p {
   margin-bottom: 1.5rem;
-  font-size: 1rem;
   text-align: center;
+  font-size: 1rem;
+
+
 }
 
 .services h2 {
   text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
   color: #112A3E;
 }
+
 
 
 
@@ -1268,10 +1299,5 @@ border-radius: 1rem;
     line-height: 5rem;
   }
 
-  .service-list{
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 1rem;
-  }
 
 }
