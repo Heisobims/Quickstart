@@ -59,7 +59,7 @@
 .poppins-black {
   font-family: "Poppins", sans-serif;
   font-weight: 900;
-  font-style: normal;
+  font-style: italic;
 }
 
 .poppins-thin-italic {
@@ -396,25 +396,25 @@ header {
 /* Services */
 
 .services {
-  background-color: #e7bd58;
-  padding: 5rem 2rem;
+  background-color: #ecebeb;
+  padding: 4rem 2rem;
   text-align: center; /* Centered content */
 }
 
 .service-list {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 4rem;
   flex-wrap: wrap; /* Added for wrapping on smaller screens */
 }
 
 .service-item {
   flex: 1 1 300px; /* Allows items to grow/shrink and wrap */
-  max-width: 400px; /* Max width for larger screens */
-  padding: 2rem 3rem;
-  background-color: #f5fafc;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  max-width: 350px; /* Max width for larger screens */
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
 
@@ -802,6 +802,11 @@ header {
   color: #122b3f;
 }
 
+.page-body-content {
+  max-width: 1200px; /* Constrain content width */
+  margin: 0 auto; /* Center content */
+}
+
 .page-body h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -831,6 +836,18 @@ header {
   padding: 2rem;
   border-radius: 8px;
   margin-bottom: 2rem;
+}
+
+.first-info{
+  background-color: #e9f1f8;
+}
+
+.second-info{
+  background-color: #faead7;
+}
+
+.third-info{
+  background-color: #fae5ec;
 }
 
 #invest-image {
@@ -961,6 +978,18 @@ border-radius: 1rem;
 
   .page-body {
     padding: 2rem 1rem;
+  }
+  
+  .page-body-info {
+    padding: 1.5rem; /* Adjusted padding for smaller screens */
+  }
+
+  .page-body h1 {
+    font-size: 2.2rem; /* Adjusted font size for smaller screens */
+  }
+
+  .page-body p {
+    font-size: 1rem; /* Adjusted font size for smaller screens */
   }
 
   .feature h1 {
@@ -1199,5 +1228,17 @@ border-radius: 1rem;
   #hero-pages h1, #hero h1 {
     font-size: 2rem;
     line-height: 1.2;
+  }
+
+  .page-body h1 {
+    font-size: 2rem; /* Smaller for very small screens */
+  }
+
+  .page-body p {
+    font-size: 0.95rem; /* Slightly smaller for very small screens */
+  }
+
+  .page-body-info {
+    padding: 1rem; /* Even less padding for very small screens */
   }
 }
