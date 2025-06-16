@@ -177,11 +177,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  justify-items: center;
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  
 }
 
 .nav-menu {
@@ -277,12 +275,12 @@ header {
   color: white;
   padding: 6rem 2rem;
   text-align: center;
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
   height: 80vh;
   position: relative;
   overflow: hidden;
+  display: flex; /* Added for centering content within */
+  align-items: center; /* Added for centering content within */
+  justify-content: center; /* Added for centering content within */
 }
 
 #hero-pages{
@@ -291,10 +289,10 @@ header {
   color: #1a4a75;
   height: 60vh;
   background-image: url("/images/COVERbg.jpg");
-  /* background-size: cover; */
   background-position: center;
   display: flex;
   justify-content: center;
+  align-items: center; /* Added for vertical centering */
 }
 
 .hero-content {
@@ -370,23 +368,21 @@ header {
 /* Feature */
 .feature{
   background-color: white;
-  transition: transform 0.3s ease;
-  padding: 2rem 0.3rem;
+  padding: 4rem 2rem; /* Increased padding for better spacing */
+  text-align: center; /* Centered text for consistency */
 }
 
 .feature h1{
   font-size: 3rem;
   margin-bottom: 1rem;
   color: #112A3E;
-  text-align: center;
   line-height: 3.5rem;
 }
 
 .feature p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
-  text-align: center;
-  padding: 2rem 1.5rem;
+  padding: 0 1.5rem; /* Adjusted padding */
 }
 
 .line {
@@ -400,23 +396,42 @@ header {
 /* Services */
 
 .services {
-  background-color: #ecebeb;
-  padding: 4rem 2rem;
-  align-content: center;
+  background-color: #e7bd58;
+  padding: 5rem 2rem;
+  text-align: center; /* Centered content */
 }
 
 .service-list {
   display: flex;
   justify-content: center;
-  gap: 4rem;
+  gap: 2rem;
+  flex-wrap: wrap; /* Added for wrapping on smaller screens */
+}
+
+.service-item {
+  flex: 1 1 300px; /* Allows items to grow/shrink and wrap */
+  max-width: 400px; /* Max width for larger screens */
+  padding: 2rem 3rem;
+  background-color: #f5fafc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+}
+
+.service-item h2 {
+  font-size: 1.8rem; /* Adjusted for better hierarchy */
+  margin-bottom: 1rem;
+  color: #112A3E;
 }
 
 .service-item p {
   margin-bottom: 1.5rem;
-  text-align: justify;
+  text-align: center; /* Centered text */
   font-size: 1rem;
-
-
 }
 
 .services h1 {
@@ -441,19 +456,27 @@ header {
   border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
-  align-items: center;
-  justify-content: center;
+  display: inline-block; /* Changed to inline-block for proper padding/margin */
+  margin-bottom: 2rem; /* Added margin */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.consultation-button:hover {
+  background-color: #0077cc;
+  color: white;
 }
 
 .consultation-button a{
   font-size: 1rem;
   text-decoration: none;
+  color: inherit; /* Inherit color from parent */
 }
 
 
 .team h1 {
   font-size: 3rem;
   color: #112A3E;
+  margin-bottom: 3rem; /* Added margin */
 }
 
 .team-list{
@@ -461,8 +484,8 @@ header {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin: auto 3rem;
-  
+  flex-wrap: wrap; /* Added for wrapping */
+  padding: 0 1rem; /* Added padding */
 }
 
 .team {
@@ -472,7 +495,6 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 
@@ -483,8 +505,7 @@ header {
   overflow: hidden;
   border-radius: 10px;
   transition: transform 0.3s ease;
-  
-  
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Added shadow for depth */
 }
 
 .image-wrapper {
@@ -506,7 +527,7 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.45);
+  background-color: rgba(0,0,0,0.6); /* Slightly darker overlay */
   color: #fff;
   opacity: 0;
   transition: opacity 0.4s ease;
@@ -523,6 +544,7 @@ header {
   color: white;
   font-weight: 400;
   font-size: 1.3rem;
+  margin-bottom: 1.5rem; /* Added margin */
 }
 
 .image-wrapper:hover .overlay {
@@ -530,7 +552,6 @@ header {
 }
 
 .learn-more {
-  margin-top: 2.5rem;
   padding: 1rem 2rem;
   border: #efc458 solid 2px;
   color: #fff;
@@ -541,6 +562,8 @@ header {
 }
 
 .learn-more:hover {
+  background-color: #efc458;
+  color: #122b3f;
   text-decoration: none;
 }
 
@@ -562,10 +585,12 @@ header {
 .why-choose-us{
   background-color: #000000;
   color: white;
+  display: flex; /* Added display flex */
+  flex-direction: column; /* Stack elements */
   align-items: center;
   justify-content: center;
-  justify-items: center;
-  padding: 3rem 1rem;
+  padding: 4rem 2rem; /* Increased padding */
+  text-align: center;
 }
 
 .why-choose-us p{
@@ -573,8 +598,8 @@ header {
   font-size: 1.5rem;
   text-align: center;
   letter-spacing: -0.02rem;
-
   margin-bottom: 3rem;
+  max-width: 800px; /* Constrain width for readability */
 }
 
 /* insights styling */
@@ -583,7 +608,6 @@ header {
   padding: 4rem 2.5rem;
   text-align: center;
   background-color: white;
-  
 }
 
 .insights h1{
@@ -595,60 +619,65 @@ header {
 .insight_one{
   display: flex;
   justify-content: center;
-  justify-items: center;
+  align-items: center; /* Vertically align items */
   gap: 4rem;
-  margin: 0 auto;
-  margin-top: 2rem;
+  margin: 2rem auto; /* Adjusted margin */
+  max-width: 1200px; /* Max width for content */
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
 }
 
 .insight_one img{
-  width: 30%;
-  height: 400px;
+  width: 35%; /* Adjusted width */
+  min-width: 300px; /* Minimum width for image */
+  height: auto;
   object-fit: cover;
   object-position: center;
+  border-radius: 8px; /* Rounded corners for images */
 }
 
 .insight-wrapper{
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  justify-items: left;
   text-align: left;
+  flex: 1 1 50%; /* Allows wrapper to take available space */
 }
 
 .insight-wrapper p{
-  width: 90%;
-  margin-top: -1rem;
+  width: 100%; /* Full width for text */
+  margin-top: -0.5rem; /* Adjusted margin */
 }
 
 .insight-wrapper .insight-p{
-  margin-top: 2rem;
+  margin-top: 1rem; /* Adjusted margin */
 }
 
 .insight-wrapper h2{
   font-size: 2rem;
   color: #112A3E;
+  margin-bottom: 0.5rem;
 }
 
 /* footer styling */
 .footer {
   background-color: #112A3E;
   color: white;
-  padding: 3rem 0;
+  padding: 3rem 1rem; /* Adjusted padding */
 }
 
 .footer-contain {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: space-between;
+  gap: 2rem; /* Adjusted gap */
+  justify-content: space-around; /* Distribute items evenly */
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .footer-title {
-  flex: 1 1 300px;
-  min-width: 250px;
+  flex: 1 1 280px; /* Adjusted flex basis for more balanced columns */
+  min-width: 200px; /* Minimum width to prevent squishing */
+  padding: 0 1rem; /* Added padding */
+  text-align: left; /* Default alignment */
 }
 
 .footer-title h1 {
@@ -687,11 +716,23 @@ header {
 
 /* socials */
 
+.social-icons {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  margin-right: 1rem;
+}
+
 .fa-brands {
   font-size: 1.5rem;
   color: white;
-  margin-right: 1rem;
   transition: color 0.3s ease;
+}
+
+.fa-brands:hover {
+  color: #e7bd58;
 }
 
 .contact-form {
@@ -723,6 +764,7 @@ header {
   border: 0;
   cursor: pointer;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .contact-form button:hover {
@@ -737,7 +779,13 @@ header {
   padding: 1rem 0;
   color: white;
   background-color: #363636;
-  gap: 30rem;
+  gap: 1rem; /* Adjusted gap to be smaller for general use */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  text-align: center; /* Center text */
+}
+
+.footer-second h4{
+  margin: 0; /* Remove default margin */
 }
 
 .footer-second img{
@@ -838,35 +886,49 @@ border-radius: 1rem;
 /* Extra Large Screens (Desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .hero h1 {
-    font-size: 4rem;
+    font-size: 4.5rem; /* Slightly larger for extra large screens */
+  }
+
+  .footer-contain {
+    justify-content: space-between; /* Distribute more evenly on large screens */
   }
 }
 
 /* Large Devices (992px to 1199px) */
-@media (max-width: 1199px) and (min-width: 992px) {
+@media (max-width: 1199px) { /* Changed from (max-width: 1199px) and (min-width: 992px) to simplify */
   .services .service-list,
   .team-list,
-  .insight_one,
-  .footer-contain {
+  .insight_one {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 2rem; /* Adjusted gap */
   }
 
   .insight_one img {
-    width: 100%;
-    height: auto;
+    width: 45%; /* Adjusted width */
+  }
+
+  .footer-contain {
+    justify-content: space-around; /* Adjusted for better spacing */
+  }
+
+  .footer-title {
+    flex: 1 1 45%; /* Two columns on larger tablets/small desktops */
+    max-width: 45%;
+    text-align: center;
   }
 }
 
 /* Medium Devices (Tablets, 768px to 991px) */
-@media (max-width: 991px) and (min-width: 768px) {
+@media (max-width: 991px) { /* Changed from (max-width: 991px) and (min-width: 768px) to simplify */
   .hero {
     height: auto;
     padding: 4rem 1rem;
   }
 
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem; /* Adjusted font size */
+    line-height: 1.3;
     letter-spacing: normal;
   }
 
@@ -878,38 +940,106 @@ border-radius: 1rem;
   }
 
   header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 1rem; /* Adjusted padding */
+  }
+
+  .nav-menu {
+    padding: 0; /* Remove padding */
+    box-shadow: none; /* Remove shadow */
   }
 
   .hero-buttons {
     flex-direction: column;
     align-items: center;
+    gap: 1rem; /* Smaller gap */
+  }
+
+  .hero-btn {
+    width: 80%; /* Make buttons take more width */
+    max-width: 300px;
   }
 
   .page-body {
     padding: 2rem 1rem;
   }
 
+  .feature h1 {
+    font-size: 2.5rem; /* Adjusted font size */
+    line-height: 1.2;
+  }
+
+  .feature p {
+    font-size: 1.1rem; /* Adjusted font size */
+    padding: 0 1rem;
+  }
+
+  .services h1, .team h1, .insights h1 {
+    font-size: 2.5rem; /* Consistent heading size */
+  }
+
+  .service-item {
+    flex: 1 1 90%; /* Single column on tablets */
+    max-width: 400px;
+  }
+
+  .team-member {
+    width: 90%; /* Make team members take more width */
+    max-width: 350px;
+    margin-bottom: 1.5rem; /* Added margin */
+  }
+
+  .why-choose-us p {
+    font-size: 1.3rem; /* Adjusted font size */
+    padding: 0 1rem;
+  }
+
+  .insight_one {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; /* Smaller gap */
+  }
+
+  .insight_one img {
+    width: 90%; /* Make images take more width */
+    height: auto;
+  }
+
+  .insight-wrapper {
+    text-align: center;
+  }
+
+  .insight-wrapper h2 {
+    font-size: 1.8rem; /* Adjusted font size */
+    margin-bottom: 0.5rem;
+  }
+
+  .insight-wrapper p {
+    padding: 0 0.5rem; /* Adjusted padding */
+  }
+
   .footer-contain {
     padding: 1.5rem;
-    align-items: flex-start;
+    flex-direction: column; /* Stack columns vertically */
+    align-items: center;
   }
 
   .footer-title {
     width: 100%;
-    text-align: center;
+    text-align: center; /* Center text in footer titles */
+    margin-bottom: 1.5rem;
   }
 
-  .footer-title h1 {
-    font-size: 34px;
-  }
   .footer-link {
-    width: 100%;
-    padding: 0 2rem;
+    align-items: center; /* Center links in footer */
   }
 
+  .social-icons {
+    justify-content: center; /* Center social icons */
+  }
+
+  .contact-form {
+    padding: 0 1rem; /* Added padding to form */
+  }
   
   .footer-second{
     flex-direction: column;
@@ -920,49 +1050,12 @@ border-radius: 1rem;
   }
 
   .footer-second h4{
-    font-size: 14px;
-  }
-
-
-  .insight-wrapper {
-    text-align: center;
-  }
-
-  .insight-wrapper h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .insight_one {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    margin: 0 auto;
-    margin-top: 2rem;
-  }
-
-  .insight_one img {
-    width: 100%;
-    height: auto;
-  }
-
-
-  .team-member img {
-    width: 100%;
-  }
-
-  .team-list {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 0.9rem;
+    font-size: 0.85rem; /* Slightly smaller font */
   }
 
   .logo img {
     height: 40px;
+    width: auto;
   }
 
   .nav-wrapper {
@@ -970,9 +1063,11 @@ border-radius: 1rem;
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 1000;
+    width: 100%; /* Full width */
+    z-index: 999; /* Ensure it's above other content */
     display: none;
     flex-direction: column;
+    transform: translateY(0); /* Ensure no initial transform */
   }
 
   .nav-wrapper.active {
@@ -980,47 +1075,46 @@ border-radius: 1rem;
   }
 
   .nav-links {
-    flex-direction: column !important;
+    flex-direction: column;
     align-items: flex-start;
     background-color: #fff;
-    position: fixed;
+    position: static; /* Change from fixed to static within wrapper */
     width: 100%;
-    left: 0;
-    top: 1;
-    padding: 2rem;
+    padding: 1rem 0; /* Adjusted padding */
     margin-top: 0;
-    transform: translateY(0);
-    transition: all 0.4s ease-in-out;
-    max-height: 70vh;
+    max-height: calc(100vh - 60px); /* Adjust max-height based on header height */
     overflow-y: auto;
   }
 
   .nav-menu .nav-links li {
     width: 100%;
+    margin-right: 0; /* Remove right margin */
   }
 
   .nav-links a {
-    display: block;
-    width: 100%;
-    padding: 1rem;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-    text-decoration: none;
-    color: #000;
+    padding: 0.8rem 1.5rem; /* Adjusted padding */
+    border-bottom: 1px solid #eee; /* Lighter border */
+    font-size: 1rem;
   }
 
   .nav-links #book-a-meeting {
     border-bottom: none;
+    margin-top: 1rem; /* Added margin */
+    padding: 0.8rem 1.5rem;
+    width: calc(100% - 3rem); /* Adjust width to account for padding */
+    text-align: center;
+    margin-left: 1.5rem; /* Align with other links' content */
   }
 
   .dropdown .dropdown-menu {
     display: none;
     position: static;
     box-shadow: none;
-    padding-left: 1rem;
+    padding-left: 1.5rem; /* Adjusted padding */
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
+    width: 100%;
   }
 
   .dropdown.active .dropdown-menu {
@@ -1030,347 +1124,80 @@ border-radius: 1rem;
 
   #hamburger {
     display: flex;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: #122b3f;
   }
-
-  .hero-btn.primary,
-  .hero-btn.secondary {
-    width: fit-content;
-  }
-
-  .hero-btn.primary:hover {
-    background-color: #e1ffe9;
-    text-decoration: none;
-  }
-
-  /* Services */
-
-
-.service-list {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  gap: 4rem;
-}
-
-.service-item {
-  text-align: center;
-}
-
-.service-item p {
-  margin-bottom: 1.5rem;
-  text-align: center;
-  font-size: 1rem;
-
-
-}
-
-.services h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #112A3E;
-}
-
-
-
 
   .cell-row {
-    display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem; /* Adjusted gap */
+    padding: 1.5rem;
   }
 
-  #hero-pages {
-    font-family: "Bebas Neue", sans-serif;
-    color: #1a4a75;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .cell {
+    padding: 0; /* Remove cell padding */
   }
 
   #hero-pages h1 {
-    font-size: 3rem;
-    color: #112A3E;
-    line-height: 3rem;
-  }
-
-  #hero {
-    color: #1a4a75;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 2.5rem; /* Smaller font for mobile hero */
+    line-height: 1.2;
+    padding: 0 1rem;
   }
 
   #hero h1 {
-    font-size: 3rem;
-    color: #112A3E;
-    line-height: 5rem;
+    font-size: 2.5rem; /* Smaller font for main hero */
+    line-height: 1.2;
+    padding: 0 1rem;
   }
-
-
 }
 
-/* Responsive Styles */
 /* Small Devices (Phones, less than 768px) */
 @media (max-width: 767px){
-  .hero {
-    height: auto;
-    padding: 4rem 1rem;
-  }
-
+  /* Most styles from 991px breakpoint will apply here and can be further refined */
   .hero h1 {
-    font-size: 2.5rem;
-    letter-spacing: normal;
+    font-size: 2rem; /* Even smaller font for very small screens */
   }
 
-  .hero-content {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
+  .feature h1 {
+    font-size: 2rem;
+    line-height: 1.2;
   }
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .feature p {
+    font-size: 1rem;
   }
 
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
+  .services h1, .team h1, .insights h1 {
+    font-size: 2rem;
   }
 
-  .page-body {
-    padding: 2rem 1rem;
-  }
-
-  .footer-contain {
-    padding: 1.5rem;
-    align-items: flex-start;
-  }
-
-  .footer-title {
-    width: 100%;
-    text-align: center;
-  }
-
-  .footer-title h1 {
-    font-size: 34px;
-  }
-  .footer-link {
-    width: 100%;
-    padding: 0 2rem;
-  }
-
-  
-  .footer-second{
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0.5rem;
-    background-color: #0a151f;
-  }
-
-  .footer-second h4{
-    font-size: 14px;
-  }
-
-
-  .insight-wrapper {
-    text-align: center;
+  .why-choose-us p {
+    font-size: 1.1rem;
   }
 
   .insight-wrapper h2 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
   }
 
-  .insight_one {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    margin: 0 auto;
-    margin-top: 2rem;
-  }
-
-  .insight_one img {
-    width: 100%;
-    height: auto;
-  }
-
-
-  .team-member img {
-    width: 100%;
-  }
-
-  .team-list {
-    flex-direction: column;
-    align-items: center;
+  .footer-title h1 {
+    font-size: 1.8rem;
   }
 
   .contact-form input,
   .contact-form textarea {
     font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .contact-form button {
+    padding: 0.6rem;
+    font-size: 0.9rem;
   }
 
   .logo img {
-    height: 40px;
+    height: 35px; /* Even smaller logo */
   }
 
-  .nav-wrapper {
-    background-color: #fff;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    display: none;
-    flex-direction: column;
+  #hero-pages h1, #hero h1 {
+    font-size: 2rem;
+    line-height: 1.2;
   }
-
-  .nav-wrapper.active {
-    display: flex;
-  }
-
-  .nav-links {
-    flex-direction: column !important;
-    align-items: flex-start;
-    background-color: #fff;
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: 1;
-    padding: 2rem;
-    margin-top: 0;
-    transform: translateY(0);
-    transition: all 0.4s ease-in-out;
-    max-height: 70vh;
-    overflow-y: auto;
-  }
-
-  .nav-menu .nav-links li {
-    width: 100%;
-  }
-
-  .nav-links a {
-    display: block;
-    width: 100%;
-    padding: 1rem;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-    text-decoration: none;
-    color: #000;
-  }
-
-  .nav-links #book-a-meeting {
-    border-bottom: none;
-  }
-
-  .dropdown .dropdown-menu {
-    display: none;
-    position: static;
-    box-shadow: none;
-    padding-left: 1rem;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-
-  .dropdown.active .dropdown-menu {
-    display: block;
-    max-height: 500px;
-  }
-
-  #hamburger {
-    display: flex;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: #122b3f;
-  }
-
-  .hero-btn.primary,
-  .hero-btn.secondary {
-    width: fit-content;
-  }
-
-  .hero-btn.primary:hover {
-    background-color: #e1ffe9;
-    text-decoration: none;
-  }
-
-  /* Services */
-
-
-.service-list {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  gap: 4rem;
-}
-
-.service-item {
-  text-align: center;
-}
-
-.service-item p {
-  margin-bottom: 1.5rem;
-  text-align: center;
-  font-size: 1rem;
-
-
-}
-
-.services h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #112A3E;
-}
-
-
-
-
-  .cell-row {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  #hero-pages {
-    font-family: "Bebas Neue", sans-serif;
-    color: #1a4a75;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  #hero-pages h1 {
-    font-size: 3rem;
-    color: #112A3E;
-    line-height: 3rem;
-  }
-
-  #hero {
-    color: #1a4a75;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  #hero h1 {
-    font-size: 3rem;
-    color: #112A3E;
-    line-height: 5rem;
-  }
-
-
 }
