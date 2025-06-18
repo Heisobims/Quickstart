@@ -1559,7 +1559,6 @@ border-radius: 1rem;
     flex-direction: column; /* Stack columns vertically */
     align-items: center;
     justify-content: space-between;
-    padding: 0;
   }
 
   .footer-title h1 {
