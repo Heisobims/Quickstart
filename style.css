@@ -1384,23 +1384,23 @@ border-radius: 1rem;
 
   .footer-contain {
     flex-direction: column; /* Stack columns vertically */
-    align-items: left;
+    align-items: center;
     max-width: 991px;
   }
 
   .footer-title {
     width: 100%;
-    text-align: left; /* Center text in footer titles */
+    text-align: center; /* Center text in footer titles */
     margin-bottom: 1.5rem;
-    justify-content: left;
+    justify-content: center;
   }
 
   .footer-link {
-    align-items: left; /* Center links in footer */
+    align-items: center; /* Center links in footer */
   }
 
   .social-icons {
-    justify-content: left; /* Center social icons */
+    justify-content: center; /* Center social icons */
   }
 
   .footer-second{
