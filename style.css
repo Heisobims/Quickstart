@@ -673,6 +673,10 @@ header {
   padding: 3rem 1rem; /* Adjusted padding */
 }
 
+#logo-footer img {
+  filter: grayscale(100%);
+}
+
 .footer-contain {
   display: flex;
   flex-wrap: wrap;
