@@ -152,6 +152,13 @@ ul, ol {
   margin-bottom: 1em;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+
 
 /* Header Styles */
 #book-a-meeting {
@@ -526,7 +533,7 @@ header {
 .image-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 10px;
 }
 
@@ -1106,31 +1113,26 @@ border-radius: 1rem;
   }
 
   .nav-wrapper {
-    background-color: #fff;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%; /* Full width */
-    z-index: 999; /* Ensure it's above other content */
-    display: none; /* Hidden by default */
-    flex-direction: column;
-    transform: translateY(0); /* Ensure no initial transform */
+    position: fixed;
+    top: 80px; /* Adjust based on header height */
+    left: -100%; /* Start off-screen to the left */
+    width: 100%; /* Full width on mobile */
+    height: calc(100% - 80px); /* Adjust based on header height */
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease-in-out; /* Smooth transition for sliding */
+    overflow-y: auto; /* Enable scrolling for long menus */
+    z-index: 999;
   }
 
   .nav-wrapper.active {
-    display: flex; /* Show when active */
+    left: 0; /* Slide into view */
   }
 
-  .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #fff;
-    position: static; /* Change from fixed to static within wrapper */
-    width: 100%;
-    padding: 1rem 0; /* Adjusted padding */
-    margin-top: 0;
-    max-height: calc(100vh - 60px); /* Adjust max-height based on header height */
-    overflow-y: auto;
+  .nav-menu .nav-links {
+    flex-direction: column; /* Stack menu items vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 1rem 0;
   }
 
   .nav-menu .nav-links li {
@@ -1155,7 +1157,7 @@ border-radius: 1rem;
 
   .dropdown .dropdown-menu {
     display: none;
-    position: static;
+    position: static; /* Change to static for mobile to flow with content */
     box-shadow: none;
     padding-left: 1.5rem; /* Adjusted padding */
     max-height: 0;
@@ -1170,9 +1172,12 @@ border-radius: 1rem;
   }
 
   #hamburger {
-    display: flex; /* Show hamburger icon on mobile */
+    display: block; /* Ensure hamburger is visible on mobile */
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's above the nav-wrapper */
   }
-
+}
   .cell-row {
     flex-direction: column;
     gap: 1.5rem; /* Adjusted gap */
@@ -1194,7 +1199,7 @@ border-radius: 1rem;
     line-height: 1.2;
     padding: 0 1rem;
   }
-}
+
 
 /* Small Devices (Phones, less than 768px) */
 @media (max-width: 768px) { /* Changed from (max-width: 991px) and (min-width: 768px) to simplify */
@@ -1600,31 +1605,26 @@ border-radius: 1rem;
   }
 
   .nav-wrapper {
-    background-color: #fff;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%; /* Full width */
-    z-index: 999; /* Ensure it's above other content */
-    display: none; /* Hidden by default */
-    flex-direction: column;
-    transform: translateY(0); /* Ensure no initial transform */
+    position: fixed;
+    top: 80px; /* Adjust based on header height */
+    left: -100%; /* Start off-screen to the left */
+    width: 100%; /* Full width on mobile */
+    height: calc(100% - 80px); /* Adjust based on header height */
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease-in-out; /* Smooth transition for sliding */
+    overflow-y: auto; /* Enable scrolling for long menus */
+    z-index: 999;
   }
 
   .nav-wrapper.active {
-    display: flex; /* Show when active */
+    left: 0; /* Slide into view */
   }
 
-  .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #fff;
-    position: static; /* Change from fixed to static within wrapper */
-    width: 100%;
-    padding: 1rem 0; /* Adjusted padding */
-    margin-top: 0;
-    max-height: calc(100vh - 60px); /* Adjust max-height based on header height */
-    overflow-y: auto;
+  .nav-menu .nav-links {
+    flex-direction: column; /* Stack menu items vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 1rem 0;
   }
 
   .nav-menu .nav-links li {
@@ -1649,7 +1649,7 @@ border-radius: 1rem;
 
   .dropdown .dropdown-menu {
     display: none;
-    position: static;
+    position: static; /* Change to static for mobile to flow with content */
     box-shadow: none;
     padding-left: 1.5rem; /* Adjusted padding */
     max-height: 0;
@@ -1664,9 +1664,12 @@ border-radius: 1rem;
   }
 
   #hamburger {
-    display: flex; /* Show hamburger icon on mobile */
+    display: block; /* Ensure hamburger is visible on mobile */
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's above the nav-wrapper */
   }
-
+}
   .cell-row {
     flex-direction: column;
     gap: 1.5rem; /* Adjusted gap */
@@ -1688,4 +1691,3 @@ border-radius: 1rem;
     line-height: 1.2;
     padding: 0 1rem;
   }
-}
