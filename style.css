@@ -400,6 +400,7 @@ header {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
   padding: 0 1.5rem; /* Adjusted padding */
+  text-align: justify;
 }
 
 .line {
@@ -447,7 +448,7 @@ header {
 
 .service-item p {
   margin-bottom: 1.5rem;
-  text-align: center; /* Centered text */
+  text-align: justify; /* Centered text */
   font-size: 1rem;
 }
 
@@ -612,7 +613,7 @@ header {
 .why-choose-us p{
   color: white;
   font-size: 1.5rem;
-  text-align: center;
+  text-align: justify;
   letter-spacing: -0.02rem;
   margin-bottom: 3rem;
   max-width: 800px; /* Constrain width for readability */
