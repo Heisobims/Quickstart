@@ -180,14 +180,21 @@ header {
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+
+  /* Add these lines for sticky behavior */
+  position: fixed; /* Makes the header stay in place */
+  top: 0;          /* Positions it at the very top of the viewport */
+  left: 0;         /* Positions it at the very left of the viewport */
+  width: 100%;     /* Makes it span the full width of the viewport */
 }
 
 .nav-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 3rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  /* Removed padding that was causing issues. Header padding is sufficient. */
+  /* padding: 1rem 3rem; */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02); */
+  /* display: flex;  - This will be controlled by media queries */
+  justify-content: space-between; /* This will be controlled by media queries */
+  align-items: center; /* This will be controlled by media queries */
   position: relative;
   
 }
@@ -202,7 +209,7 @@ header {
   list-style: none;
   padding-left: 0;
   margin: 0;
-  display: flex;
+  display: flex; /* Default to flex for desktop */
   align-items: center;
 }
 
@@ -279,8 +286,9 @@ header {
   position: relative;
   overflow: hidden;
   display: flex; /* Added for centering content within */
-  align-items: center; /* Added for centering content within */
-  justify-content: center; /* Added for centering content within */
+  align-items: left; /* Added for centering content within */
+  justify-content: left; /* Added for centering content within */
+  margin-top: 80px; /* Adjust this value to match your header's actual height */
 }
 
 #hero-pages{
@@ -293,6 +301,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center; /* Added for vertical centering */
+  margin-top: 80px; /* Adjust for fixed header */
 }
 
 .hero-content {
@@ -326,6 +335,7 @@ header {
   color: #112A3E;
   font-size: 4rem;
   margin-bottom: 2rem;
+  text-align: left;
 }
 
 
@@ -367,7 +377,7 @@ header {
 
 /* Feature */
 .feature{
-  background-color: white;
+  background-color: #f8f9f9;
   padding: 4rem 2rem; /* Increased padding for better spacing */
   text-align: center; /* Centered text for consistency */
 }
@@ -396,7 +406,7 @@ header {
 /* Services */
 
 .services {
-  background-color: #ecebeb;
+  background-color: #f8f9f9;
   padding: 4rem 2rem;
   text-align: center; /* Centered content */
 }
@@ -404,22 +414,22 @@ header {
 .service-list {
   display: flex;
   justify-content: center;
-  gap: 4rem;
+  gap: 2rem;
   flex-wrap: wrap; /* Added for wrapping on smaller screens */
 }
 
 .service-item {
   flex: 1 1 300px; /* Allows items to grow/shrink and wrap */
-  max-width: 350px; /* Max width for larger screens */
-  padding: 1.5rem;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 500px; /* Max width for larger screens */
+  padding: 3rem;
+  border-radius: 3px;
+  background-color: #e6eafd;
+  /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
   transition: transform 0.3s ease;
 }
 
 .service-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
 }
 
 .service-item h2 {
@@ -489,7 +499,7 @@ header {
 }
 
 .team {
-  background-color: #ffffff;
+  background-color: #f4f0ec;
   padding: 4rem 2rem;
   text-align: center;
   display: flex;
@@ -503,9 +513,8 @@ header {
   width: 300px;
   height: 350px;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 3px;
   transition: transform 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Added shadow for depth */
 }
 
 .image-wrapper {
@@ -583,7 +592,7 @@ header {
 /* Why Us Style */
 
 .why-choose-us{
-  background-color: #000000;
+  background-color: #1a4a75;
   color: white;
   display: flex; /* Added display flex */
   flex-direction: column; /* Stack elements */
@@ -798,7 +807,7 @@ header {
 
 .page-body{
   padding: 4rem 3rem;
-  background-color: #ffffff;
+  background-color: #f8f9f9;
   color: #122b3f;
 }
 
@@ -889,6 +898,7 @@ border-radius: 1rem;
   transition: border-color 0.3s ease;
 }
 
+/* Original hamburger styles which should be hidden by default on desktop */
 #hamburger {
   display: none;
   cursor: pointer;
@@ -958,11 +968,17 @@ border-radius: 1rem;
 
   header {
     padding: 1rem; /* Adjusted padding */
+    position: fixed; /* Makes the header stay in place */
+    top: 0;          /* Positions it at the very top of the viewport */
+    left: 0;         /* Positions it at the very left of the viewport */
+    width: 100%;
   }
 
+  /* Reset nav-menu for mobile to avoid desktop padding affecting layout */
   .nav-menu {
     padding: 0; /* Remove padding */
     box-shadow: none; /* Remove shadow */
+    display: block; /* Change from flex to block to allow nav-links to be controlled by active class */
   }
 
   .hero-buttons {
@@ -1094,13 +1110,13 @@ border-radius: 1rem;
     left: 0;
     width: 100%; /* Full width */
     z-index: 999; /* Ensure it's above other content */
-    display: none;
+    display: none; /* Hidden by default */
     flex-direction: column;
     transform: translateY(0); /* Ensure no initial transform */
   }
 
   .nav-wrapper.active {
-    display: flex;
+    display: flex; /* Show when active */
   }
 
   .nav-links {
@@ -1148,11 +1164,11 @@ border-radius: 1rem;
 
   .dropdown.active .dropdown-menu {
     display: block;
-    max-height: 500px;
+    max-height: 500px; /* Arbitrary value to allow content to show */
   }
 
   #hamburger {
-    display: flex;
+    display: flex; /* Show hamburger icon on mobile */
   }
 
   .cell-row {
