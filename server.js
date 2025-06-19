@@ -25,7 +25,7 @@ app.post("/contact", (req, res) => {
 
   const mailOptions = {
     from: email,
-    to: "heisobims@gmail.com",
+    to: "info@quickstartus.com",
     subject: `Contact Form: ${subject}`,
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };
