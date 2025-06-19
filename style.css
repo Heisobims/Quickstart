@@ -139,10 +139,12 @@ a {
 a:hover {
   text-decoration: underline;
 }
-/* h1, h2, h3, h4, h5, h6 {
+
+h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   margin-bottom: 0.5em;
-} */
+}
+
 p {
   margin-bottom: 1em;
   color: #363636;
@@ -345,7 +347,7 @@ header {
 .hero h1 {
   font-family: "Bebas Neue", sans-serif;
   color: #112A3E;
-  font-size: 80rem;
+  font-size: 72px;
   margin-bottom: 2rem;
   text-align: left;
 }
@@ -408,12 +410,6 @@ header {
   text-align: justify;
 }
 
-.line {
-  width: 100%;
-  border-bottom: #cecece 1px solid;
-  margin: 1.5rem 0;
-  margin-top: 3rem;
-}
 
 
 /* Services */
@@ -931,7 +927,7 @@ border-radius: 1rem;
 /* Extra Large Screens (Desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .hero h1 {
-    font-size: 9rem; /* Slightly larger for extra large screens */
+    font-size: 72px; /* Slightly larger for extra large screens */
   }
 
   .footer-contain {
@@ -998,6 +994,11 @@ border-radius: 1rem;
     box-shadow: none; /* Remove shadow */
     display: block; /* Change from flex to block to allow nav-links to be controlled by active class */
   }
+
+  ul.nav-links{
+    gap: 0.5rem;
+  }
+
 
   .hero-buttons {
     flex-direction: column;
@@ -1147,8 +1148,7 @@ border-radius: 1rem;
   }
 
   .nav-links a {
-    padding: 0.8rem 1.5rem; /* Adjusted padding */
-    border-bottom: 1px solid #eee; /* Lighter border */
+    padding: 0.8rem 2rem; /* Adjusted padding */
     font-size: 1rem;
   }
 
@@ -1201,7 +1201,7 @@ border-radius: 1rem;
   }
 
   #hero h1 {
-    font-size: 2.5rem; /* Smaller font for main hero */
+    font-size: 6rem; /* Smaller font for main hero */
     line-height: 1.2;
     padding: 0 1rem;
   }
@@ -1241,6 +1241,11 @@ border-radius: 1rem;
     box-shadow: none; /* Remove shadow */
     display: block; /* Change from flex to block to allow nav-links to be controlled by active class */
   }
+
+    ul.nav-links{
+    gap: 0.5rem;
+  }
+
 
   .hero-buttons {
     flex-direction: column;
@@ -1396,7 +1401,6 @@ border-radius: 1rem;
 
   .nav-links a {
     padding: 0.8rem 1.5rem; /* Adjusted padding */
-    border-bottom: 1px solid #eee; /* Lighter border */
     font-size: 1rem;
   }
 
@@ -1483,6 +1487,10 @@ border-radius: 1rem;
     padding: 0; /* Remove padding */
     box-shadow: none; /* Remove shadow */
     display: block; /* Change from flex to block to allow nav-links to be controlled by active class */
+  }
+
+  ul.nav-links{
+    gap: 0.5rem;
   }
 
   .hero-buttons {
@@ -1640,7 +1648,6 @@ border-radius: 1rem;
 
   .nav-links a {
     padding: 0.8rem 1.5rem; /* Adjusted padding */
-    border-bottom: 1px solid #eee; /* Lighter border */
     font-size: 1rem;
   }
 
@@ -1687,13 +1694,15 @@ border-radius: 1rem;
   }
 
   #hero-pages h1 {
-    font-size: 2.5rem; /* Smaller font for mobile hero */
+    font-size: 5rem; /* Smaller font for mobile hero */
     line-height: 1.2;
     padding: 0 1rem;
+    text-align: center;
   }
 
   #hero h1 {
-    font-size: 2.5rem; /* Smaller font for main hero */
+    font-size: 4rem; /* Smaller font for main hero */
     line-height: 1.2;
     padding: 0 1rem;
+    text-align: center;
   }
