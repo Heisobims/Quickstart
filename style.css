@@ -139,10 +139,10 @@ a {
 a:hover {
   text-decoration: underline;
 }
-h1, h2, h3, h4, h5, h6 {
+/* h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   margin-bottom: 0.5em;
-}
+} */
 p {
   margin-bottom: 1em;
   color: #363636;
@@ -327,15 +327,14 @@ header {
   animation: fadeIn 1s ease-in-out;
 }
 
+
+
 .hero-content.active {
   display: block;
   opacity: 1;
   z-index: 1;
 }
 
-.hero-content h1{
-  font-size: 8rem;
-}
 
 @keyframes fadeIn {
   from { opacity: 0; }
